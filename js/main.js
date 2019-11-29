@@ -33,7 +33,7 @@ window.addEventListener('load', function () {
             };
             myCanvas.innerHTML = (new Array(100)).fill(1).map(function (v, i) {
                 return `<span class="WM-span" style="color: #${
-                    ['F00','080','000'][i%3]
+                    ['F00','000'][i2]
                 }">仅供【${data.jsInput_orgName}】使用，其他用途无效，${data.dateStr}后无效！！！</span>`
             }).join('');
         })();
