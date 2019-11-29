@@ -4,9 +4,14 @@
         <meta charset="utf-8">
     </head>
     <body>
+        <div class="http404" style="display: none;">
+            404 Not Found
+        </div>
         <script type="text/javascript">
         if (location.pathname === '/id-shuiyin/') {
             location.replace('index.html');
+        } else {
+            document.querySelector('.http404').style.display = 'block';
         };
         </script>
     </body>
