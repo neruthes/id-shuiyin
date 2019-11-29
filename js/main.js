@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
                     console.log(dateStr);
                     return dateStr;
                 })(),
-                jsInput_orgName: document.querySelector('#jsInput-orgName').value
+                jsInput_orgName: document.querySelector('#jsInput-orgName').value === '' ? '个人海淘' : document.querySelector('#jsInput-orgName').value
             };
             myCanvas.innerHTML = (new Array(100)).fill(1).map(function (v, i) {
                 return `<span class="WM-span" style="color: #${

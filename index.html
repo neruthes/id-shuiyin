@@ -27,7 +27,7 @@
             outline: none;
             display: block;
             width: 100%;
-            padding: 5px;
+            padding: 10px;
         }
         .btn-blue {
             color: #FFF;
@@ -110,7 +110,17 @@
                 <div class="content">
                     <div class="content-inner">
                         <div class="content-inner-section">
-                            <input type="text" id="jsInput-orgName" value="在此输入证件用途" placeholder="在此输入证件用途">
+                            <input type="text" id="jsInput-orgName" value="" placeholder="在此输入证件用途……">
+                        </div>
+                        <div class="content-inner-section">
+                            <style media="screen">
+                            p {
+                                margin: 0.75em 0;
+                            }
+                            </style>
+                            <p>生成的图片是半透明文字、透明底色的 PNG，可直接覆盖在证件图片上。</p>
+                            <p>半角字符支持不佳，慎用。</p>
+                            <p>日期是自动生成的，为 7 天后同一秒。</p>
                         </div>
                         <div class="content-inner-section">
                             <div id="my-img-export" style="">
