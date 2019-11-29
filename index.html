@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>证件水印</title>
+        <script type="text/javascript" src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        <script type="text/javascript" src="js/main.js" async></script>
+        <style media="screen">
+        .float-left {float: left;}
+        .float-right {float: right;}
+        .btn {
+            display: inline-block;
+            font-size: 18px;
+            line-height: 20px;
+            border-radius: 4px;
+            padding: 10px 10px;
+            cursor: pointer;
+        }
+        input[type="text"] {
+            font-family: -apple-system, '.SF Pro Text', 'SF Pro Text', sans-serif, 'Noto Sans CJK CN', 'Source Han Sans SC', 'Hiragino Sans GB', 'Heiti SC';
+            font-size: 16px;
+            line-height: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            outline: none;
+            display: block;
+            width: 100%;
+            padding: 5px;
+        }
+        .btn-blue {
+            color: #FFF;
+            background: #1088F0;
+
+        }
+        </style>
+        <style media="screen">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html, body {
+            font-family: -apple-system, '.SF Pro Text', 'SF Pro Text', sans-serif, 'Noto Sans CJK CN', 'Source Han Sans SC', 'Hiragino Sans GB', 'Heiti SC';
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <style media="screen">
+        h1 {
+            font-size: 30px;
+            line-height: 40px;
+            padding: 0;
+            margin: 0;
+        }
+        .header {
+            padding: 20px 0;
+        }
+        .footer {
+            padding: 20px 0 40px;
+        }
+        .footer, .footer * {
+            font-size: 14px;
+            color: #999;
+        }
+        .header-inner,
+        .content-inner,
+        .footer-inner {
+            max-width: 800px;
+            padding: 0 10px;
+            margin: 0 auto;
+        }
+        #my-img-export img {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <style>
+        /* Canvas */
+        #my-canvas-area {
+            opacity: 0.37;
+        }
+        .WM-span {
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 4px;
+            letter-spacing: -0.55em;
+            /* letter-spacing: -0.2em; */
+        }
+        .MW-span._even {color: #F00;}
+        .MW-span._odd {color: #07D;}
+        </style>
+    </head>
+    <body>
+        <div class="cont">
+            <div class="major">
+                <header class="header">
+                    <div class="header-inner">
+                        <div class="float-right">
+                            <span class="btn btn-blue" id="jsBtn-generate">生成</span>
+                        </div>
+                        <div class="main-title">
+                            <h1>海淘水印</h1>
+                        </div>
+                    </div>
+                </header>
+                <div class="content">
+                    <div class="content-inner">
+                        <div class="content-inner-section">
+                            <input type="text" id="jsInput-orgName" value="在此输入证件用途" placeholder="在此输入证件用途">
+                        </div>
+                        <div class="content-inner-section">
+                            <div id="my-img-export" style="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                document.querySelector('#my-img-export').style.minHeight = document.querySelector('#my-img-export').offsetWidth + 'px';
+                </script>
+                <footer class="footer">
+                    <div class="footer-inner">
+                        &copy; 2019 <a href="https://neruthes.xyz/">Neruthes &lt;neruthes.xyz&gt;</a>
+                    </div>
+                </footer>
+            </div>
+            <div id="my-canvas-area" style="overflow: hidden; width: 600px; height: 600px; position: fixed; top: -999px; left: -999px;">
+            </div>
+
+            <script type="text/javascript"></script>
+        </div>
+    </body>
+</html>
