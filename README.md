@@ -1,1 +1,1 @@
-https://joyneop.xyz/id-shuiyin/
+https://neruthes.xyz/id-shuiyin/
